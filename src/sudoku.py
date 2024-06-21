@@ -43,6 +43,16 @@ def main():
     for row in solved_grid:
         print(' '.join(str(num) for num in row))
 
+    while True:
+        choice = input('Do you wish to solve another grid? (y/n): ')
+        if choice == 'y':
+            main()
+        elif choice == 'n':
+            break
+        else:
+            print('Invalid input. Please enter y or n.')
+            continue
+
 if __name__ == '__main__':
     main()
 
